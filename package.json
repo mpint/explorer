@@ -2,14 +2,15 @@
   "name": "explorer",
   "description": "XRPL Data Visualization",
   "version": "1.5.0",
+  "main": "index",
   "dependencies": {
     "@google-cloud/bigquery": "^7.3.0",
     "@paystring/utils": "^2.0.0",
     "@redux-devtools/extension": "^3.2.6",
     "@rollup/plugin-inject": "^5.0.5",
     "@vitejs/plugin-react": "^3.0.0",
-    "@xrplf/prettier-config": "^1.9.1",
     "@xrplf/isomorphic": "^1.0.0-beta.1",
+    "@xrplf/prettier-config": "^1.9.1",
     "assert": "^2.1.0",
     "autoprefixer": "^10.4.16",
     "axios": "^1.5.1",
@@ -105,6 +106,7 @@
     "ts-jest": "^26.5.6",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.4",
+    "wrangler": "^3.20.0",
     "xrpl": "^3.0.0-beta.1"
   },
   "resolutions": {
@@ -116,10 +118,10 @@
       "git add"
     ]
   },
-  "main": "index",
   "private": true,
   "scripts": {
     "analyze": "source-map-explorer build/static/js/main.*",
+    "dev-cloudflare": "wrangler pages dev build",
     "build": "vite build",
     "build-ts": "tsc --build",
     "dev-client": "vite serve",
