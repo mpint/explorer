@@ -11,6 +11,8 @@ const ENV_NETWORK_MAP: Record<string, string> = {
 }
 
 function getNetworkName() {
+  console.log('supsup')
+
   if (
     process.env.VITE_ENVIRONMENT &&
     process.env.VITE_ENVIRONMENT in ENV_NETWORK_MAP

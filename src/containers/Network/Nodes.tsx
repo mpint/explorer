@@ -27,6 +27,7 @@ export const Nodes = () => {
   const language = useLanguage()
   const { t } = useTranslation()
   const network = useContext(NetworkContext)
+  console.log('yooooo', network)
 
   const { data } = useQuery(['fetchNodesData'], async () => fetchData(), {
     refetchInterval: (returnedData, _) =>
@@ -37,6 +38,10 @@ export const Nodes = () => {
   })
 
   const fetchData = async () =>
+    console.log(
+      `process.env.VITE_DAasdfsafdTA_URL`,
+      process.env.VITE_DATA_URL,
+    ) ||
     axios
       .get(`${process.env.VITE_DATA_URL}/topology/nodes/${network}`)
       .then((resp) => resp.data.nodes)

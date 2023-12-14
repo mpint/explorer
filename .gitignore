@@ -5,6 +5,7 @@ node_modules/
 /coverage
 
 # production
+.wrangler
 /build
 src/**/*.css
 src/**/*.css.map
@@ -75,3 +76,4 @@ deploy.sh
 
 #ENV
 .env
+.dev.vars
